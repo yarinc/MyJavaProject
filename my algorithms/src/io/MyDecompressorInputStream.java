@@ -24,8 +24,6 @@ public class MyDecompressorInputStream extends InputStream {
 					i++;
 				}
 			}
-			else
-				System.out.println("BLABLA");
 		}
 		return 0; 
 		
