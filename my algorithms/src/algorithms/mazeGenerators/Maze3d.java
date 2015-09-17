@@ -35,7 +35,7 @@ public class Maze3d {
 				throw e;
 			}
 	}
-	public Maze3d(byte[] b, byte[] check) {
+	public Maze3d(byte[] b) {
 		int x,y,z,i = 36;
 		Position start = new Position();
 		Position goal = new Position();
