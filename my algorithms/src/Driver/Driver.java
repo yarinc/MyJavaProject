@@ -16,7 +16,7 @@ public class Driver {
 
 	public static void main(String[] args) throws IOException {
 		MyMaze3dGenerator mazeGen = new MyMaze3dGenerator();
-		Maze3d maze = mazeGen.generate(new Position(10,10,10));
+		Maze3d maze = mazeGen.generate(new Position(5,5,5));
 		// save it to a file
 		OutputStream out=new MyCompressorOutputStream(new FileOutputStream("1.maz"));
 		byte[] check = maze.toByteArray();
