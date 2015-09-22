@@ -388,7 +388,7 @@ public class Maze3d {
 					if(j != bounds.getX() - 1)
 						maze = maze + ", ";
 				}
-				maze = maze + "]";
+				maze = maze + "]\n";
 			}
 			maze = maze + "\n";
 		}
