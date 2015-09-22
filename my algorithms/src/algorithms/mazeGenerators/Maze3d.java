@@ -128,24 +128,7 @@ public class Maze3d {
 		else
 			return -1;
 	}
-	/**
-	 * Printing the maze.
-	 */
-	public void printMaze() {
-		int i,j,k;
-		for(i=0;i<bounds.getY();i++){
-			for(k=0;k<bounds.getZ();k++){
-				System.out.print ("[");
-				for(j=0;j<bounds.getX(); j++) {
-					System.out.print(getMazeValue(new Position(j,i,k)));
-					if(j != bounds.getX() - 1)
-						System.out.print(", ");
-				}
-				System.out.println("]");
-			}
-			System.out.print("\n");
-		}
-	}
+	
 	/**
 	 * Getting a 2 dimensions maze slice determined by coordinate x.
 	 * @param coordinate The desired x coordinate.
