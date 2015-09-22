@@ -158,8 +158,8 @@ public class Maze3d {
 		else {
 			int[][] crossY = new int[bounds.getX()][bounds.getZ()];
 			int k,j;
-			for(k=0; k < bounds.getX(); k++) {
-				for(j=0;j<bounds.getZ();j++) {
+			for(k=0; k < bounds.getZ(); k++) {
+				for(j=0;j<bounds.getX();j++) {
 					crossY[k][j] = maze[k][coordinate][j];
 				}
 			}
