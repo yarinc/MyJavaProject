@@ -9,7 +9,7 @@ import algorithms.search.BFS;
 import algorithms.search.ManhattanDistance;
 import algorithms.search.Solution;
 /**
- * Class to demonstrate the genetate and solve algorithms in action
+ * Class to demonstrate the generate and solve algorithms in action
  * @author Yarin Cohen
  */
 public class Demo {
@@ -19,13 +19,13 @@ public class Demo {
 	public void run() { 
 		MyMaze3dGenerator mazeGen = new MyMaze3dGenerator();
 		Maze3d maze=mazeGen.generate(new Position(10,10,10));
-		maze.printMaze();
+		System.out.println(maze.toString());
 		//Solve with BFS 
 		BFS<Position> bfs = new BFS<Position>();
 		Maze3dSearch search = new Maze3dSearch(maze);
 		Solution<Position> solutionByBFS = bfs.search(search);
 		System.out.println("BFS solution:");
-		solutionByBFS.print();
+		System.out.println(solutionByBFS);
 		//Create Heuristics
 		ManhattanDistance manhattan = new ManhattanDistance();
 		AirDistance air = new AirDistance();
@@ -33,12 +33,12 @@ public class Demo {
 		AStar<Position> aStar = new AStar<>(air);
 		Solution<Position> solutionByAir = aStar.search(search);
 		System.out.println("AStar with air distance heuristic solution:");
-		solutionByAir.print();
+		System.out.println(solutionByAir);
 		//Solve with AStar using Manhattan distance heuristic
 		aStar.setHeuristic(manhattan);
 		Solution<Position> solutionByManhattan = aStar.search(search);
 		System.out.println("AStar with manhattan distance heuristic solution:");
-		solutionByManhattan.print();
+		System.out.println(solutionByManhattan);
 			
 	}
 	/**
