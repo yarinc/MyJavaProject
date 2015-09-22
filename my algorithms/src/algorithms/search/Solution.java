@@ -2,6 +2,7 @@ package algorithms.search;
 
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
 /**
  * Solution class represent a solution to a Searchable object. 
  * It's contain a list of the moves required to solve the Searchable object.
@@ -9,7 +10,11 @@ import java.util.ArrayList;
  * @param <T> - The type of solution.
  */
 public class Solution<T> {
+	
+	/** The solution. */
 	private ArrayList<T> solution;
+	
+	/** The nodes evaluated. */
 	private int nodesEvaluated;
 	
 	/**
@@ -48,13 +53,17 @@ public class Solution<T> {
 	public void add(T node) { 
 		solution.add(node); 
 	}
-	/**
-	 * Prints the Solution.
-	 * First prints the nodes in order and than the nodesEvaluated value.
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
 	 */
-	public void print() { 
+	@Override
+	public String toString() {
+		String print = new String();
 		for(T place : solution)
-			System.out.println(place);
-		System.out.println("Number of nodes evaluated: " + nodesEvaluated + "\n");
+			print = print + place + "\n";
+		print = print + "Number of nodes evaluated: " + nodesEvaluated + "\n";
+		return print;
 	}
+	
 }
