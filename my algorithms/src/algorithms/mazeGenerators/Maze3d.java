@@ -35,6 +35,12 @@ public class Maze3d {
 				throw e;
 			}
 	}
+	
+	/**
+	 * Instantiates a new maze3d.
+	 * The constructor gets an array that has been decompressed and generate a 3d maze.
+	 * @param b the decompressed array
+	 */
 	public Maze3d(byte[] b) {
 		int x,y,z,i = 36;
 		Position start = new Position();
@@ -63,6 +69,10 @@ public class Maze3d {
 			}
 		}
 	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	public boolean equals(Object obj) {
 		int x,y,z;
 		if((((Maze3d)(obj)).getGoalPosition()).equals(this.getGoalPosition()) && (((Maze3d)(obj)).getStartPosition()).equals(this.getStartPosition()) && (((Maze3d)(obj)).getBounds()).equals(this.getBounds())) {
@@ -330,6 +340,11 @@ public class Maze3d {
 		Position forward = new Position(place.getX(), place.getY(), place.getZ() - 1);
 		return forward;
 	}
+	
+	/**
+	 * Method that transfer the whole maze into a byte array.
+	 * @return the byte array
+	 */
 	public byte[] toByteArray() {
 		
 		int mazeLength = bounds.getX()*bounds.getY()*bounds.getZ();
@@ -355,5 +370,28 @@ public class Maze3d {
 			}	
 		}
 		return b;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		//Creating a String that represents the array.
+		String maze = new String();
+		int i,j,k;
+		for(i=0;i<bounds.getY();i++){
+			for(k=0;k<bounds.getZ();k++){
+				maze = maze + "[";
+				for(j=0;j<bounds.getX(); j++) {
+					maze = maze + (getMazeValue(new Position(j,i,k)));
+					if(j != bounds.getX() - 1)
+						maze = maze + ", ";
+				}
+				maze = maze + "]";
+			}
+			maze = maze + "\n";
+		}
+		return maze;
 	}
 }
