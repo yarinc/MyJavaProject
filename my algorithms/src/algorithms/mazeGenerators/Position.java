@@ -1,11 +1,17 @@
 package algorithms.mazeGenerators;
 
+import java.io.Serializable;
+
 /**
  * Class that represent a single position by {x,y,z} coordinates.
  * @author Yarinc Cohen
  */
-public class Position {
+public class Position implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int x;
 	private int y;
 	private int z;

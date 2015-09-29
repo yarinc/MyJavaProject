@@ -1,5 +1,6 @@
 package algorithms.mazeGenerators;
 
+import java.io.Serializable;
 import java.nio.ByteBuffer;
 
 /**
@@ -10,8 +11,12 @@ import java.nio.ByteBuffer;
  * @author Yarin Cohen
  *
  */
-public class Maze3d {
+public class Maze3d implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Declaring data members
 	private Position bounds;
 	private Position startPosition;

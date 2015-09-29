@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 // TODO: Auto-generated Javadoc
@@ -9,8 +10,13 @@ import java.util.ArrayList;
  * @author Yarin Cohen
  * @param <T> - The type of solution.
  */
-public class Solution<T> {
+public class Solution<T> implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	/** The solution. */
 	private ArrayList<T> solution;
 	
