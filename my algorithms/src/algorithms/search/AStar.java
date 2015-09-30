@@ -35,6 +35,8 @@ public class AStar<T> extends BackTraceAlgos <T>{
 	 */
 	public Solution<T> search(Searchable<T> s) {
 		//Declare variables
+		if(s == null)
+			return null;
 		int nodesEvaluated = 0;
         PriorityQueue<State<T>> openList = new PriorityQueue<>();
 		HashSet<State<T>> closedSet=new HashSet<>();
