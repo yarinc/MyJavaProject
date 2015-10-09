@@ -165,7 +165,7 @@ public class Maze3d implements Serializable {
 			int k,j;
 			for(k=0; k < bounds.getZ(); k++) {
 				for(j=0;j<bounds.getX();j++) {
-					crossY[k][j] = maze[j][coordinate][k];
+					crossY[k][j] = maze[k][coordinate][j];
 				}
 			}
 			return crossY;
