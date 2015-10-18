@@ -64,7 +64,7 @@ public class MyMaze3dGenerator extends Maze3dAbstract {
 			if(maze.getMazeValue(maze.getGoalPosition()) != 0)
 				maze.setGoalPosition(chooseExit(size));
 			//Make sure that startPosition and GoalPosition is not the same position
-			if(maze.getGoalPosition() == maze.getStartPosition())
+			if(maze.getGoalPosition().equals(maze.getStartPosition()))
 				maze.setGoalPosition(chooseExit(size));
 		} while ((maze.getMazeValue(maze.getStartPosition()) != 0) || (maze.getMazeValue(maze.getGoalPosition()) != 0) || (maze.getGoalPosition() == maze.getStartPosition()));
 		return maze;

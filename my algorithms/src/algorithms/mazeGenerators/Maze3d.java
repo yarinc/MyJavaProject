@@ -43,6 +43,17 @@ public class Maze3d implements Serializable {
 	
 	/**
 	 * Instantiates a new maze3d.
+	 * Copy constructor for Maze3d class.
+	 * @param maze The source maze.
+	 */
+	public Maze3d(Maze3d maze) {
+		this.bounds = maze.getBounds();
+		this.startPosition = maze.startPosition;
+		this.goalPosition = maze.goalPosition;
+		this.maze = maze.maze;
+	}
+	/**
+	 * Instantiates a new maze3d.
 	 * The constructor gets an array that has been decompressed and generate a 3d maze.
 	 * @param b the decompressed array
 	 */
