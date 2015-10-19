@@ -3,24 +3,16 @@ package algorithms.search;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-// TODO: Auto-generated Javadoc
 /**
  * Solution class represent a solution to a Searchable object. 
  * It's contain a list of the moves required to solve the Searchable object.
  * @author Yarin Cohen
  * @param <T> - The type of solution.
  */
-public class Solution<T> implements Serializable{
+public class Solution<T> implements Serializable {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-
-	/** The solution. */
 	private ArrayList<T> solution;
-	
-	/** The nodes evaluated. */
 	private int nodesEvaluated;
 	
 	/**

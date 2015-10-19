@@ -13,11 +13,7 @@ import java.nio.ByteBuffer;
  */
 public class Maze3d implements Serializable {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	//Declaring data members
 	private Position bounds;
 	private Position startPosition;
 	private Position goalPosition;
